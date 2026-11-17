@@ -1,0 +1,5 @@
+Nome do assistente: Citizen Assist AI
+Público atendido: Pessoas idosas (transporte público: ônibus, trem/metrô e rodoviário)
+Integrantes e RM: (preencher)
+Link do repositório GitHub: (preencher)
+Link do vídeo técnico no YouTube: (preencher)

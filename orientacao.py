@@ -1,0 +1,35 @@
+"""
+    Arquivo: representa uma informação (um registro) da base de conhecimento.
+    Data: 10/11/2026
+    Autor: Leonardo Scotti
+    Versão: 1.0.11.26
+"""
+
+AVISO = "este assistente NÃO é um canal oficial."
+
+
+class Orientacao:
+    def __init__(self, id, categoria, titulo, palavras_chave, resposta,
+                 documentos, onde, fonte, verificado_em):
+        self.id = id
+        self.categoria = categoria
+        self.titulo = titulo
+        self.palavras_chave = palavras_chave
+        self.resposta = resposta
+        self.documentos = documentos
+        self.onde = onde
+        self.fonte = fonte
+        self.verificado_em = verificado_em
+
+    def exibir(self):
+
+        print(f"\n>> {self.titulo}  [{self.categoria}]")
+        print(self.resposta)
+        print("Documentos necessários:")
+        if not self.documentos:
+            print("  - Nenhum documento específico para este caso")
+        for doc in self.documentos:
+            print(f"  - {doc}")
+        print(f"Onde: {self.onde}")
+        print(f"Fonte: {self.fonte} (verificado em {self.verificado_em})")
+        print(f"Aviso: {AVISO}")
