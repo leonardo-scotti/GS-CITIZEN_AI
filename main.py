@@ -1,9 +1,3 @@
-"""
-    Arquivo: Citzen AI - assistente de orientação sobre transporte público para idosos.
-    Data: 11/11/2026
-    Autor: Leonardo Scotti
-    Versão: 1.0.11.26
-"""
 import os
 
 from assistente import Assistente

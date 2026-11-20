@@ -1,9 +1,3 @@
-"""
-    Arquivo: lê o JSON, lista categorias e busca a melhor orientação.
-    Data: 10/11/2026
-    Autor: Leonardo Scotti
-    Versão: 1.0.11.26
-"""
 import json
 
 from orientacao import Orientacao
@@ -11,13 +5,11 @@ from orientacao import Orientacao
 ACENTOS = {"á": "a", "à": "a", "ã": "a", "â": "a", "é": "e", "ê": "e",
            "í": "i", "ó": "o", "õ": "o", "ô": "o", "ú": "u", "ç": "c", "ü": "u"}
 
-# Regras de pontuação
 PESO_PALAVRA_CHAVE = 3
 PESO_TITULO = 1
 LIMITE_ALTA = 6
 LIMITE_MEDIA = 3
 
-# Palavras comuns que não ajudam a achar o assunto
 IGNORAR = ["como", "para", "onde", "qual", "quais", "quem", "pode", "preciso",
            "quero", "tenho", "fazer", "faco", "esse", "essa", "isso", "minha"]
 
@@ -32,12 +24,26 @@ def normalizar(texto: str) -> str:
 
 
 def confianca(pontos: int) -> str:
-
     if pontos >= LIMITE_ALTA:
         return "ALTA"
     if pontos >= LIMITE_MEDIA:
         return "MÉDIA"
     return "BAIXA"
+
+
+def registro_valido(o: Orientacao) -> bool:
+    if not isinstance(o.id, int):
+        return False
+    for campo in [o.categoria, o.titulo, o.resposta, o.onde, o.fonte, o.verificado_em]:
+        if not isinstance(campo, str) or campo.strip() == "":
+            return False
+    for lista in [o.palavras_chave, o.documentos]:
+        if not isinstance(lista, list):
+            return False
+        for item in lista:
+            if not isinstance(item, str):
+                return False
+    return len(o.palavras_chave) > 0
 
 
 def pontos_da_tupla(tupla):
@@ -50,7 +56,6 @@ class BaseConhecimento:
         self.orientacoes = []
 
     def carregar(self) -> bool:
-
         self.orientacoes = []
         try:
             with open(self.caminho, "r", encoding="utf-8") as arquivo:
@@ -69,12 +74,11 @@ class BaseConhecimento:
         ignoradas = 0
         for item in dados:
             try:
-                # cada dicionário do JSON vira um objeto Orientacao
                 orientacao = Orientacao(**item)
             except TypeError:
                 ignoradas += 1
                 continue
-            if isinstance(orientacao.palavras_chave, list) and orientacao.palavras_chave:
+            if registro_valido(orientacao):
                 self.orientacoes.append(orientacao)
             else:
                 ignoradas += 1
@@ -101,7 +105,6 @@ class BaseConhecimento:
         return lista
 
     def pontuar(self, pergunta: str, orientacao: Orientacao) -> int:
-
         texto = normalizar(pergunta)
         pontos = 0
         for chave in orientacao.palavras_chave:

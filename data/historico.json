@@ -1,1 +1,74 @@
-[]
+[
+  {
+    "data": "2026-11-20 02:08:08",
+    "origem": "pergunta",
+    "pergunta": "Como faço o Bilhete Único do idoso?",
+    "id_orientacao": 2,
+    "encontrou": true,
+    "ajudou": true,
+    "tentativas": 1,
+    "tempo_segundos": null,
+    "sessao": "2026-11-20 02:08:08",
+    "nota_facilidade": null
+  },
+  {
+    "data": "2026-11-20 02:08:08",
+    "origem": "pergunta",
+    "pergunta": "Como faço o Bilhete Único do idoso?",
+    "id_orientacao": 2,
+    "encontrou": true,
+    "ajudou": true,
+    "tentativas": 1,
+    "tempo_segundos": null,
+    "sessao": "2026-11-20 02:08:08",
+    "nota_facilidade": null
+  },
+  {
+    "data": "2026-11-20 02:08:09",
+    "origem": "pergunta",
+    "pergunta": "Tenho direito a gratuidade nos onibus?",
+    "id_orientacao": null,
+    "encontrou": false,
+    "ajudou": false,
+    "tentativas": 1,
+    "tempo_segundos": null,
+    "sessao": "2026-11-20 02:08:09",
+    "nota_facilidade": null
+  },
+  {
+    "data": "2026-11-20 02:08:09",
+    "origem": "categoria",
+    "pergunta": "Ônibus urbano > Pedir o Bilhete Único Especial da Pessoa Idosa (65 anos ou mais, São Paulo)",
+    "id_orientacao": 2,
+    "encontrou": true,
+    "ajudou": true,
+    "tentativas": 1,
+    "tempo_segundos": null,
+    "sessao": "2026-11-20 02:08:09",
+    "nota_facilidade": null
+  },
+  {
+    "data": "2026-11-20 02:08:15",
+    "origem": "pergunta",
+    "pergunta": "Tenho direito a gratuidade nos onibus?",
+    "id_orientacao": 1,
+    "encontrou": true,
+    "ajudou": true,
+    "tentativas": 1,
+    "tempo_segundos": null,
+    "sessao": "2026-11-20 02:08:15",
+    "nota_facilidade": 5
+  },
+  {
+    "data": "2026-11-20 02:08:15",
+    "origem": "pergunta",
+    "pergunta": "Onde reclamar se negaram a gratuidade?",
+    "id_orientacao": 9,
+    "encontrou": true,
+    "ajudou": true,
+    "tentativas": 1,
+    "tempo_segundos": null,
+    "sessao": "2026-11-20 02:08:15",
+    "nota_facilidade": 5
+  }
+]

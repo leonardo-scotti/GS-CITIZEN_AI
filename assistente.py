@@ -1,9 +1,3 @@
-"""
-    Arquivo: Classe Assistente: faz o atendimento, guarda o histórico e calcula os indicadores.
-    Data: 10/11/2026
-    Autor: Leonardo Scotti
-    Versão: 1.0.11.2026
-"""
 import csv
 import json
 import os
@@ -44,7 +38,6 @@ class Assistente:
         self.historico = []
         self._carregar_historico()
 
-    # ========== entrada de dados =========
     def _ler_opcao(self, minimo, maximo):
         while True:
             texto = input("Escolha uma opção: ").strip()
@@ -59,14 +52,15 @@ class Assistente:
 
     def _pedir_sn(self, pergunta):
         while True:
-            resposta = input(f"\n{pergunta} (s/n): ").strip().lower()
+            resposta = input(f"\n{pergunta} (s/n, 0 para voltar): ").strip().lower()
             if resposta in ("s", "sim"):
                 return True
             if resposta in ("n", "nao", "não"):
                 return False
-            print("Resposta inválida. Digite s para sim ou n para não.")
+            if resposta == "0":
+                return None
+            print("Resposta inválida. Digite s para sim, n para não ou 0 para voltar.")
 
-    # ========== histórico ==========
     def _carregar_historico(self):
         if not os.path.exists(self.caminho_historico):
             return
@@ -96,7 +90,6 @@ class Assistente:
 
     def registrar(self, origem, pergunta, id_orientacao, encontrou, ajudou,
                   tentativas, tempo):
-
         atendimento = {
             "data": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
             "origem": origem,
@@ -112,24 +105,23 @@ class Assistente:
         self.historico.append(atendimento)
         self._salvar_historico()
 
-    # =========== atendimento por pergunta ==========
     def perguntar(self):
         while self._atender_pergunta():
             pass
 
     def _atender_pergunta(self):
-
         inicio = time.time()
         tentativas = 0
         encontrou = False
         id_orientacao = None
-        ultima = ""
+        perguntas = []
         while True:
             texto = input("\nDigite sua dúvida (0 para voltar): ").strip()
             if texto == "0":
                 if tentativas > 0:
-                    self.registrar("pergunta", ultima, id_orientacao, encontrou,
-                                   False, tentativas, round(time.time() - inicio, 1))
+                    self.registrar("pergunta", " | ".join(perguntas), id_orientacao,
+                                   encontrou, False, tentativas,
+                                   round(time.time() - inicio, 1))
                 return False
             if texto == "":
                 print("Você não digitou nada. Escreva sua dúvida ou digite 0 para voltar.")
@@ -142,7 +134,7 @@ class Assistente:
                 continue
 
             tentativas += 1
-            ultima = texto
+            perguntas.append(texto)
             resultados = self.base.buscar(texto)
 
             if not resultados or resultados[0][0] < LIMITE_MEDIA:
@@ -161,10 +153,15 @@ class Assistente:
                 for p, o in alternativas:
                     print(f"  - {o.titulo} [{o.categoria}] ({p} pontos)")
 
-            if self._pedir_sn("Essa orientação respondeu sua dúvida?"):
+            ajudou = self._pedir_sn("Essa orientação respondeu sua dúvida?")
+            if ajudou:
                 self.registrar("pergunta", texto, melhor.id, True, True,
                                tentativas, round(time.time() - inicio, 1))
                 return True
+            if ajudou is None:
+                self.registrar("pergunta", " | ".join(perguntas), melhor.id, True,
+                               False, tentativas, round(time.time() - inicio, 1))
+                return False
             print("Que pena. Tente escrever de outro jeito ou use a navegação por categorias.")
 
     def _mostrar_nao_encontrei(self):
@@ -174,7 +171,6 @@ class Assistente:
         for c in self.base.categorias():
             print(f"  - {c}")
 
-    # ========== navegação por categorias ==========
     def navegar(self):
         categorias = self.base.categorias()
         while True:
@@ -202,18 +198,21 @@ class Assistente:
             escolhida.exibir()
             ajudou = self._pedir_sn("Essa orientação respondeu sua dúvida?")
             self.registrar("categoria", f"{categoria} > {escolhida.titulo}",
-                           escolhida.id, True, ajudou, 1,
+                           escolhida.id, True, bool(ajudou), 1,
                            round(time.time() - inicio, 1))
+            if ajudou is None:
+                return
 
-    # ========== indicadores ==========
     def indicadores(self):
-
         total = len(self.historico)
         if total == 0:
             return {"total": 0}
         encontrados = [a for a in self.historico if a.get("encontrou")]
         ajudaram = [a for a in self.historico if a.get("ajudou")]
-        tempos = [a.get("tempo_segundos", 0) for a in encontrados]
+        tempos = []
+        for a in encontrados:
+            if a.get("tempo_segundos") is not None:
+                tempos.append(a["tempo_segundos"])
         tentativas = [a.get("tentativas", 1) for a in self.historico]
 
         notas = {}
@@ -223,14 +222,16 @@ class Assistente:
 
         sem_solucao = []
         for a in self.historico:
-            if not a.get("ajudou") and a.get("pergunta") not in sem_solucao:
-                sem_solucao.append(a.get("pergunta"))
+            if not a.get("ajudou"):
+                for p in str(a.get("pergunta")).split(" | "):
+                    if p not in sem_solucao:
+                        sem_solucao.append(p)
 
         return {
             "total": total,
             "encontrada_pct": round(len(encontrados) / total * 100, 1),
             "acerto_pct": round(len(ajudaram) / total * 100, 1),
-            "tempo_medio": round(sum(tempos) / len(tempos), 1) if tempos else 0,
+            "tempo_medio": round(sum(tempos) / len(tempos), 1) if tempos else None,
             "tentativas_media": round(sum(tentativas) / total, 1),
             "facilidade": round(sum(notas.values()) / len(notas), 1) if notas else None,
             "sem_solucao": sem_solucao,
@@ -245,7 +246,10 @@ class Assistente:
         print(f"Atendimentos registrados:      {ind['total']}")
         print(f"Resposta encontrada (%):       {ind['encontrada_pct']}")
         print(f"Taxa de acerto: ajudou (%):    {ind['acerto_pct']}")
-        print(f"Tempo médio para encontrar:    {ind['tempo_medio']} s")
+        if ind["tempo_medio"] is None:
+            print("Tempo médio para encontrar:    sem dados")
+        else:
+            print(f"Tempo médio para encontrar:    {ind['tempo_medio']} s")
         print(f"Tentativas por atendimento:    {ind['tentativas_media']}")
         facilidade = ind["facilidade"] if ind["facilidade"] is not None else "sem notas ainda"
         print(f"Facilidade de uso (1 a 5):     {facilidade}")
@@ -256,9 +260,7 @@ class Assistente:
         else:
             print("  (nenhuma)")
 
-    # ========== exportação ==========
     def exportar_csv(self):
-
         try:
             pasta = os.path.dirname(self.caminho_csv)
             if pasta:
@@ -275,16 +277,16 @@ class Assistente:
             print(f"[Aviso] Não foi possível exportar o CSV: {erro}")
             return False
 
-    # ========== encerramento ==========
     def encerrar(self):
-
         da_sessao = [a for a in self.historico if a.get("sessao") == self.sessao]
         if da_sessao:
             print("\nQuanto foi fácil usar este assistente? 1 = muito difícil, 5 = muito fácil.")
-            nota = self._ler_opcao(1, 5)
-            for a in da_sessao:
-                a["nota_facilidade"] = nota
-            self._salvar_historico()
+            print("(0 para pular)")
+            nota = self._ler_opcao(0, 5)
+            if nota != 0:
+                for a in da_sessao:
+                    a["nota_facilidade"] = nota
+                self._salvar_historico()
         self.exportar_csv()
         self.mostrar_indicadores()
         print("\nObrigado por usar o Citizen Assist AI. Até logo!")

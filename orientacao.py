@@ -1,10 +1,3 @@
-"""
-    Arquivo: representa uma informação (um registro) da base de conhecimento.
-    Data: 10/11/2026
-    Autor: Leonardo Scotti
-    Versão: 1.0.11.26
-"""
-
 AVISO = "este assistente NÃO é um canal oficial."
 
 
@@ -22,7 +15,6 @@ class Orientacao:
         self.verificado_em = verificado_em
 
     def exibir(self):
-
         print(f"\n>> {self.titulo}  [{self.categoria}]")
         print(self.resposta)
         print("Documentos necessários:")

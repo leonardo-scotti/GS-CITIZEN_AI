@@ -1,0 +1,298 @@
+[
+  {
+    "id": 1,
+    "categoria": "Ônibus urbano",
+    "titulo": "Gratuidade nos ônibus urbanos para idosos",
+    "palavras_chave": [
+      "onibus gratuito",
+      "onibus de graca",
+      "gratuidade no onibus",
+      "gratuidade onibus",
+      "pagar passagem",
+      "de graca no onibus",
+      "idoso paga onibus",
+      "gratuidade nos onibus",
+      "onibus gratis",
+      "direito a gratuidade",
+      "pago onibus",
+      "pagar onibus",
+      "65 anos"
+    ],
+    "resposta": "A lei federal garante transporte coletivo urbano gratuito para quem tem 65 anos ou mais. Na cidade de São Paulo, a gratuidade nos ônibus municipais também vale de 60 a 64 anos. Em outras cidades, a regra para 60 a 64 anos pode ser diferente: confirme na prefeitura.",
+    "documentos": [
+      "Qualquer documento pessoal que mostre a sua idade (por exemplo, o RG)"
+    ],
+    "onde": "No embarque do ônibus urbano. Na capital paulista, com o Bilhete Único da Pessoa Idosa",
+    "fonte": "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.741.htm",
+    "verificado_em": "2026-11-16"
+  },
+  {
+    "id": 2,
+    "categoria": "Ônibus urbano",
+    "titulo": "Pedir o Bilhete Único Especial da Pessoa Idosa (65 anos ou mais, São Paulo)",
+    "palavras_chave": [
+      "bilhete unico",
+      "bilhete unico idoso",
+      "bilhete unico do idoso",
+      "bilhete unico especial",
+      "cartao do idoso",
+      "sptrans",
+      "tirar bilhete",
+      "como pedir bilhete",
+      "pedir o cartao",
+      "pedir bilhete"
+    ],
+    "resposta": "A partir dos 65 anos, o pedido é feito no site de atendimento da SPTrans ou em um posto de atendimento. Depois do cadastro, o cartão é enviado de graça para o endereço informado. Em caso de dúvida, ligue 156.",
+    "documentos": [
+      "RG (frente e verso)",
+      "CPF",
+      "Comprovante de residência recente (até 3 meses)",
+      "Uma foto legível e atualizada"
+    ],
+    "onde": "Site atendimento.sptrans.com.br ou postos de atendimento da SPTrans",
+    "fonte": "https://www.sptrans.com.br",
+    "verificado_em": "2026-11-16"
+  },
+  {
+    "id": 3,
+    "categoria": "Ônibus urbano",
+    "titulo": "Gratuidade de 60 a 64 anos no Bilhete Único comum (São Paulo)",
+    "palavras_chave": [
+      "60 a 64 anos",
+      "60 anos",
+      "61 anos",
+      "62 anos",
+      "63 anos",
+      "64 anos",
+      "carregar gratuidade",
+      "recarga gratuidade"
+    ],
+    "resposta": "Quem tem de 60 a 64 anos usa o Bilhete Único comum já cadastrado. É preciso carregar a gratuidade todo mês, aproximando o cartão do equipamento de recarga duas vezes: uma vez para ônibus e outra para trilhos. Quem ainda não tem Bilhete Único cadastrado deve pedir no site da SPTrans.",
+    "documentos": [
+      "Bilhete Único comum já cadastrado",
+      "Se ainda não tiver, veja os documentos pedidos no site da SPTrans"
+    ],
+    "onde": "Equipamentos de recarga do Bilhete Único; pedido de cadastro no site da SPTrans",
+    "fonte": "https://www.sptrans.com.br",
+    "verificado_em": "2026-11-16"
+  },
+  {
+    "id": 4,
+    "categoria": "Trens e metrô",
+    "titulo": "Gratuidade em trens, metrô e monotrilho (Grande São Paulo)",
+    "palavras_chave": [
+      "metro",
+      "trem",
+      "trens",
+      "monotrilho",
+      "cptm",
+      "viamobilidade",
+      "linha 8",
+      "diamante",
+      "gratuidade no metro",
+      "andar de trem",
+      "andar de metro",
+      "metro de graca",
+      "trem de graca",
+      "metro gratuito",
+      "trem gratuito"
+    ],
+    "resposta": "Na Grande São Paulo, quem tem 65 anos ou mais viaja de graça nos trens, no metrô e no monotrilho. De 60 a 64 anos, a gratuidade também vale desde 2023, usando o Bilhete Único com a gratuidade carregada ou o Cartão TOP. Confirme os detalhes no site do Metrô ou da empresa do trem.",
+    "documentos": [
+      "Bilhete Único da Pessoa Idosa (65 anos ou mais) ou Bilhete Único com gratuidade carregada (60 a 64 anos)",
+      "Documento com foto"
+    ],
+    "onde": "Catracas das estações de trem, metrô e monotrilho",
+    "fonte": "https://www.metro.sp.gov.br",
+    "verificado_em": "2026-11-16"
+  },
+  {
+    "id": 5,
+    "categoria": "Trens e metrô",
+    "titulo": "Ônibus intermunicipais da EMTU e Cartão TOP (60 a 64 anos)",
+    "palavras_chave": [
+      "emtu",
+      "cartao top",
+      "onibus intermunicipal",
+      "intermunicipal",
+      "metropolitano",
+      "onibus metropolitano"
+    ],
+    "resposta": "Desde 2023, pessoas de 60 a 64 anos podem usar o Cartão TOP para ter gratuidade nos ônibus da EMTU e nos trilhos. Como existem regras específicas para cada região, confirme no site da EMTU como pedir o cartão.",
+    "documentos": [
+      "Documento com foto",
+      "Veja no site da EMTU os demais documentos do pedido"
+    ],
+    "onde": "Site da EMTU e canais de atendimento da EMTU",
+    "fonte": "https://www.emtu.sp.gov.br",
+    "verificado_em": "2026-11-16"
+  },
+  {
+    "id": 6,
+    "categoria": "Viagens entre cidades e estados",
+    "titulo": "Passagem gratuita em ônibus entre estados (2 vagas por ônibus)",
+    "palavras_chave": [
+      "passagem gratis",
+      "passagem gratuita",
+      "interestadual",
+      "viajar de graca",
+      "viagem entre estados",
+      "onibus rodoviario",
+      "rodoviaria",
+      "vaga gratuita",
+      "passagem de graca",
+      "viagem gratuita",
+      "viajar para outro estado"
+    ],
+    "resposta": "No ônibus convencional entre estados, cada veículo deve ter 2 vagas gratuitas para pessoas com 60 anos ou mais e renda de até 2 salários mínimos (R$ 3.242 em 2026). As vagas são poucas, por isso peça a passagem o quanto antes.",
+    "documentos": [
+      "Documento pessoal com foto que comprove a idade (60 anos ou mais)",
+      "Comprovante de renda de até 2 salários mínimos"
+    ],
+    "onde": "Guichês e canais de venda da empresa de ônibus",
+    "fonte": "https://www.gov.br/antt",
+    "verificado_em": "2026-11-16"
+  },
+  {
+    "id": 7,
+    "categoria": "Viagens entre cidades e estados",
+    "titulo": "Desconto de 50% na passagem de ônibus entre estados",
+    "palavras_chave": [
+      "desconto de 50",
+      "50 por cento",
+      "meia passagem",
+      "desconto passagem",
+      "desconto na passagem",
+      "metade do preco"
+    ],
+    "resposta": "Quando as 2 vagas gratuitas já estão ocupadas, quem tem 60 anos ou mais e renda de até 2 salários mínimos tem direito a desconto de, no mínimo, 50% no valor da passagem. Pergunte à empresa sobre o prazo para comprar com desconto.",
+    "documentos": [
+      "Documento pessoal com foto que comprove a idade (60 anos ou mais)",
+      "Comprovante de renda de até 2 salários mínimos"
+    ],
+    "onde": "Guichês e canais de venda da empresa de ônibus",
+    "fonte": "https://www.gov.br/antt",
+    "verificado_em": "2026-11-16"
+  },
+  {
+    "id": 8,
+    "categoria": "Viagens entre cidades e estados",
+    "titulo": "Carteira da Pessoa Idosa para viagens entre estados",
+    "palavras_chave": [
+      "carteira do idoso",
+      "carteira da pessoa idosa",
+      "carteirinha do idoso",
+      "carteirinha",
+      "cadunico",
+      "cad unico",
+      "cadastro unico"
+    ],
+    "resposta": "A Carteira da Pessoa Idosa é para quem tem 60 anos ou mais, renda individual de até 2 salários mínimos e Cadastro Único atualizado. Ela ajuda a comprovar o direito nas viagens entre estados. Para atualizar o Cadastro Único, procure o CRAS da sua cidade.",
+    "documentos": [
+      "Documento pessoal com foto",
+      "Cadastro Único (CadÚnico) atualizado"
+    ],
+    "onde": "CRAS ou posto do Cadastro Único da sua cidade",
+    "fonte": "https://www.gov.br/mds",
+    "verificado_em": "2026-11-16"
+  },
+  {
+    "id": 9,
+    "categoria": "Viagens entre cidades e estados",
+    "titulo": "Reclamar de empresa de ônibus que negou gratuidade ou desconto",
+    "palavras_chave": [
+      "reclamar",
+      "reclamacao",
+      "negaram a gratuidade",
+      "empresa negou",
+      "antt",
+      "ouvidoria",
+      "166"
+    ],
+    "resposta": "Nas viagens de ônibus entre estados, a ANTT recebe reclamações. Ligue 166 (a ligação é gratuita), use o site da ANTT ou o aplicativo ANTT Cidadão. Se o problema foi em linha dentro da cidade ou do mesmo estado, a reclamação vai para o órgão de transporte local.",
+    "documentos": [
+      "Nome da empresa, linha, data e hora da viagem",
+      "Número do bilhete, se tiver"
+    ],
+    "onde": "Telefone 166 da ANTT, site da ANTT ou aplicativo ANTT Cidadão",
+    "fonte": "https://www.gov.br/antt",
+    "verificado_em": "2026-11-16"
+  },
+  {
+    "id": 10,
+    "categoria": "Direitos e segurança",
+    "titulo": "Assentos reservados para idosos nos ônibus",
+    "palavras_chave": [
+      "assento reservado",
+      "assentos reservados",
+      "assento preferencial",
+      "banco reservado",
+      "lugar para sentar",
+      "sentar no onibus"
+    ],
+    "resposta": "Pelo Estatuto da Pessoa Idosa, 10% dos assentos do transporte coletivo urbano e semiurbano devem ser reservados para pessoas idosas e ter aviso de identificação. Você pode pedir com educação para sentar nesses lugares.",
+    "documentos": [],
+    "onde": "Dentro dos ônibus, nos assentos identificados como reservados",
+    "fonte": "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.741.htm",
+    "verificado_em": "2026-11-16"
+  },
+  {
+    "id": 11,
+    "categoria": "Direitos e segurança",
+    "titulo": "Que documento levar para provar a idade",
+    "palavras_chave": [
+      "que documento levar",
+      "qual documento",
+      "documento para provar idade",
+      "prova de idade",
+      "provar a idade",
+      "rg",
+      "documento do idoso"
+    ],
+    "resposta": "Para a gratuidade no transporte urbano, basta apresentar qualquer documento pessoal que prove a sua idade, como o RG. Nos ônibus entre estados, também é preciso comprovar a renda de até 2 salários mínimos.",
+    "documentos": [
+      "Qualquer documento pessoal que mostre a sua idade (por exemplo, o RG)"
+    ],
+    "onde": "No embarque, ao usar a gratuidade",
+    "fonte": "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.741.htm",
+    "verificado_em": "2026-11-16"
+  },
+  {
+    "id": 12,
+    "categoria": "Direitos e segurança",
+    "titulo": "Cuidado com golpes e sites falsos do Bilhete Único",
+    "palavras_chave": [
+      "golpe",
+      "site falso",
+      "cobrar taxa",
+      "cobraram",
+      "fraude",
+      "despachante",
+      "taxa para bilhete"
+    ],
+    "resposta": "O Bilhete Único da Pessoa Idosa é enviado gratuitamente. Faça o pedido somente pelo site oficial da SPTrans e desconfie de quem cobrar taxa ou pedir senha e dados bancários.",
+    "documentos": [],
+    "onde": "Site oficial da SPTrans (sptrans.com.br) ou telefone 156",
+    "fonte": "https://www.sptrans.com.br",
+    "verificado_em": "2026-11-16"
+  },
+  {
+    "id": 13,
+    "categoria": "Direitos e segurança",
+    "titulo": "Onde tirar dúvidas sobre o Bilhete Único na capital paulista",
+    "palavras_chave": [
+      "telefone sptrans",
+      "ligar 156",
+      "156",
+      "atendimento sptrans",
+      "falar com sptrans",
+      "telefone de ajuda",
+      "central de atendimento"
+    ],
+    "resposta": "Para dúvidas sobre o Bilhete Único e a gratuidade na cidade de São Paulo, ligue 156 ou use o Atendimento Digital da SPTrans.",
+    "documentos": [],
+    "onde": "Telefone 156 ou Atendimento Digital no site da SPTrans",
+    "fonte": "https://www.sptrans.com.br",
+    "verificado_em": "2026-11-16"
+  }
+]
