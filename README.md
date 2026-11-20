@@ -34,14 +34,8 @@ Composição: `Assistente` → `BaseConhecimento` → lista de `Orientacao`.
 - 6+ pontos: confiança ALTA; 3 a 5: MÉDIA; abaixo de 3: "não encontrei"
 - Ajuste da equipe: palavras comuns (como, para, onde, qual...) não pontuam no título; alternativas só aparecem com 3+ pontos.
 
-## Integrações com outras disciplinas
-Nenhuma (preencher se houver).
-
 ## Fontes consultadas
 Estatuto da Pessoa Idosa (Lei 10.741/2003), SPTrans, Metrô-SP, EMTU, ANTT, MDS. **Antes de entregar, abra cada link da base e reconfirme os dados, atualizando `verificado_em`.**
-
-## Resultado do teste com usuários
-(preencher: mínimo 3 pessoas, 10 atendimentos; indicadores, dúvidas sem solução e uma melhoria feita. Sem nomes.)
 
 ## Limitações
 - Foco na Grande São Paulo; outras cidades têm regras próprias.
@@ -50,4 +44,4 @@ Estatuto da Pessoa Idosa (Lei 10.741/2003), SPTrans, Metrô-SP, EMTU, ANTT, MDS.
 - Perguntas livres são salvas no histórico: o assistente bloqueia 8+ dígitos e "@", mas não detecta nomes.
 
 ## Vídeo técnico
-(colar link do YouTube não listado)
+[(Vídeo)](https://youtu.be/09y_kpmx6-M)
